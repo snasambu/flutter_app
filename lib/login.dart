@@ -1,6 +1,5 @@
-// Excellerate - Styled Login Page (single-file Flutter widget)
-// Drop this file into your Flutter project (e.g. lib/screens/login_page.dart)
-// Usage: Navigator.push(context, MaterialPageRoute(builder: (_) => LoginPage()));
+import 'package:shared_preferences/shared_preferences.dart';
+
 
 import 'package:flutter/material.dart';
 
@@ -52,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
       );
     }
   }
-
+  
   Widget _buildLogo() {
     return Column(
       children: [
@@ -238,6 +237,7 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -265,4 +265,6 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
+  
 }
+
