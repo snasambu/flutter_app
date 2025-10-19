@@ -1,58 +1,65 @@
 import 'package:flutter/material.dart';
 import '../models/program.dart';
-import 'program_details_screen.dart';
 import '../theme/app_colors.dart';
+import 'program_details_screen.dart';
 
 class ProgramListingScreen extends StatelessWidget {
+  ProgramListingScreen({super.key});
+
   final List<Program> programs = [
     Program(
       id: '1',
       title: 'Flutter Basics',
       description: 'Learn Flutter from scratch',
-      duration: '4 weeks',
+      duration: '2 weeks',
     ),
     Program(
       id: '2',
       title: 'Advanced Flutter',
       description: 'Deep dive into Flutter',
-      duration: '6 weeks',
+      duration: '3 weeks',
     ),
     Program(
       id: '3',
       title: 'UI/UX Design',
       description: 'Design amazing apps',
-      duration: '3 weeks',
+      duration: '1 week',
     ),
   ];
-
-  ProgramListingScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Programs')),
-      body: ListView.builder(
-        padding: const EdgeInsets.all(16),
-        itemCount: programs.length,
-        itemBuilder: (context, index) {
-          final program = programs[index];
-          return Card(
-            color: AppColors.gray100,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-            margin: const EdgeInsets.symmetric(vertical: 8),
-            child: ListTile(
-              title: Text(program.title, style: const TextStyle(fontWeight: FontWeight.bold)),
-              subtitle: Text(program.description),
-              trailing: Text(program.duration),
+      backgroundColor: AppColors.background,
+      appBar: AppBar(
+        title: const Text('Programs'),
+        backgroundColor: AppColors.primary,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ListView.separated(
+          itemCount: programs.length,
+          separatorBuilder: (context, index) => const SizedBox(height: 16),
+          itemBuilder: (context, index) {
+            final program = programs[index];
+            return ListTile(
+              tileColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              title: Text(program.title),
+              subtitle: Text('${program.description}\nDuration: ${program.duration}'),
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => ProgramDetailsScreen(program: program)),
+                  MaterialPageRoute(
+                    builder: (context) => ProgramDetailsScreen(program: program),
+                  ),
                 );
               },
-            ),
-          );
-        },
+            );
+          },
+        ),
       ),
     );
   }
