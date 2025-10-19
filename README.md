@@ -58,8 +58,13 @@ It demonstrates the core user flow through **four functional screens** with navi
 ---
 
 ## 🎨 Design Reference
-Figma Wireframe (Week 1 Design):  
-👉 [Paste your Figma link here](#)
+Figma Wireframe
+## 🎨 Figma Wireframe
+
+You can view the complete design wireframe for this project on Figma:
+
+👉 [Excelerate Flutter App Wireframe](https://www.figma.com/make/O1GZQ7tvooGfoqd2qnFWPO/Excelerate-Flutter-App-Wireframe?node-id=0-1&t=ot1Bn5miBADq2N9N-1)
+
 
 ---
 
