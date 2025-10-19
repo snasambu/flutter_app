@@ -34,3 +34,9 @@ Login → Home → Manage Programs → Program Details/Profile → Announcements
 
 ## Version Control
 This repository uses Git for version control. The initial Flutter project setup has been committed and pushed to GitHub.
+# Flutter App Web Demo
+
+This repo contains the Flutter app. The web version is hosted on GitHub Pages:
+
+[Live Demo](https://snasambu.github.io/flutter_app/)
+
