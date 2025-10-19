@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'theme/app_colors.dart';
-import 'home_screen.dart'; // Make sure this path matches your project structure
+import '../theme/app_colors.dart';
+import 'home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -14,23 +14,6 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   bool _obscurePassword = true;
-
-  @override
-  void dispose() {
-    _emailController.dispose();
-    _passwordController.dispose();
-    super.dispose();
-  }
-
-  void _login() {
-    if (_formKey.currentState!.validate()) {
-      // TODO: Replace this with actual login logic
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (_) => const HomeScreen()),
-      );
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -55,21 +38,18 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(height: 16),
                 Text(
                   'Login to your account',
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: AppColors.gray600,
-                  ),
+                  style: TextStyle(fontSize: 16, color: AppColors.gray600),
                 ),
                 const SizedBox(height: 32),
-                // Email
+                // Email Field
                 TextFormField(
                   controller: _emailController,
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                     hintText: 'Email',
-                    prefixIcon: const Icon(Icons.email),
                     filled: true,
                     fillColor: AppColors.gray100,
+                    prefixIcon: const Icon(Icons.email),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
                       borderSide: BorderSide.none,
@@ -86,18 +66,18 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                 ),
                 const SizedBox(height: 16),
-                // Password
+                // Password Field
                 TextFormField(
                   controller: _passwordController,
                   obscureText: _obscurePassword,
                   decoration: InputDecoration(
                     hintText: 'Password',
+                    filled: true,
+                    fillColor: AppColors.gray100,
                     prefixIcon: const Icon(Icons.lock),
                     suffixIcon: IconButton(
                       icon: Icon(
-                        _obscurePassword
-                            ? Icons.visibility
-                            : Icons.visibility_off,
+                        _obscurePassword ? Icons.visibility : Icons.visibility_off,
                       ),
                       onPressed: () {
                         setState(() {
@@ -105,8 +85,6 @@ class _LoginScreenState extends State<LoginScreen> {
                         });
                       },
                     ),
-                    filled: true,
-                    fillColor: AppColors.gray100,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
                       borderSide: BorderSide.none,
@@ -134,15 +112,22 @@ class _LoginScreenState extends State<LoginScreen> {
                         borderRadius: BorderRadius.circular(12),
                       ),
                     ),
-                    onPressed: _login,
+                    onPressed: () {
+                      if (_formKey.currentState!.validate()) {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(builder: (_) => const HomeScreen()),
+                        );
+                      }
+                    },
                     child: const Text(
                       'Login',
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
                 const SizedBox(height: 16),
+                // Forgot Password
                 TextButton(
                   onPressed: () {},
                   child: Text(
