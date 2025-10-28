@@ -1,0 +1,39 @@
+{
+  "user": {
+    "id": 1,
+    "name": "Alex Johnson",
+    "email": "alex.johnson@example.com",
+    "profilePicture": "https://via.placeholder.com/150",
+    "university": "Nairobi University",
+    "major": "Computer Science",
+    "graduationYear": 2026,
+    "country": "Kenya",
+    "city": "Nairobi",
+    "totalHours": 24.5,
+    "scholarshipsEarned": 300,
+    "badges": [
+      {
+        "id": 1,
+        "name": "First Internship",
+        "icon": "🏆",
+        "earnedDate": "2025-09-15"
+      },
+      {
+        "id": 2,
+        "name": "Quick Learner",
+        "icon": "⚡",
+        "earnedDate": "2025-10-01"
+      }
+    ],
+    "skills": [
+      {
+        "name": "JavaScript",
+        "level": "Intermediate"
+      },
+      {
+        "name": "Python",
+        "level": "Beginner"
+      }
+    ]
+  }
+}
