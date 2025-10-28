@@ -1,59 +1,69 @@
-# Excelerate Flutter App
+# 📘 Excelerate Learning App  
 
-## Project Vision
-An engaging mobile app that enables users to explore programs, access learning content, provide feedback, and stay updated on announcements.
-
-## Objectives
-- Provide learners with easy access to programs and content.
-- Allow admins to manage programs efficiently.
-- Enable user feedback and communication within the app.
-
-## Navigation Flow
-
-### Learner
-Login → Home → Program Listing → Program Details → Feedback / Content Access
-
-### Admin
-Login → Home → Manage Programs → Program Details/Profile → Announcements / Edit Programs
-
-## Short User Journeys
-
-### Learner Journey
-1. Login to the app.
-2. Browse the Home page for available programs.
-3. Select a program from the Program Listing.
-4. View program details and access learning content.
-5. Provide feedback on the program.
-
-### Admin Journey
-1. Login to the app.
-2. Access the Home page to see program overview.
-3. Manage programs by adding, editing, or deleting them.
-4. View program details or learner profiles.
-5. Post announcements for learners.
-
-## Version Control
-This repository uses Git for version control. The initial Flutter project setup has been committed and pushed to GitHub.
-# Flutter App Web Demo
-
-This repo contains the Flutter app. The web version is hosted on GitHub Pages:
-
-[Live Demo](https://snasambu.github.io/flutter_app/)
-# 🚀 Flutter App UI Prototype
-
-## 📘 Overview
-This project is a **Flutter-based mobile and web prototype** developed as part of the **Excelerate Internship Program (Week 2 Deliverable)**.  
-It demonstrates the core user flow through **four functional screens** with navigation implemented between them.
+An internal **Flutter learning management app** developed by the **Excelerate Team**.  
+This app supports two user roles — **Learner** and **Admin** — covering end-to-end workflows for internships, courses, and program management.
 
 ---
 
-## 🧠 Features Implemented
-✅ Login Screen  
-✅ Home Screen  
-✅ Program Listing Screen  
-✅ Program Details Screen  
-✅ Navigation between all screens  
-✅ Custom theme colors for a modern, clean UI  
+## 🎯 Project Vision & Objectives  
+
+**Vision:**  
+To create a streamlined, intuitive, and accessible learning platform for learners and administrators, enabling effective program management, learning, and feedback collection.
+
+**Objectives:**  
+- Provide learners with easy access to programs, learning content, and feedback mechanisms.  
+- Allow administrators to manage programs, view learner progress, and post announcements.  
+- Ensure role-based navigation and a modular, maintainable Flutter codebase.  
+- Enable cross-platform deployment (web + mobile) using Flutter.  
+
+---
+
+## 🎯 Features  
+
+### 👩‍🎓 Learner Journey  
+- Login (using any username + password)  
+- Browse available programs  
+- View program details  
+- Access learning content  
+- Provide feedback  
+
+### 👨‍💼 Admin Journey  
+- Login  
+- View program overview on Home screen  
+- Add / Edit / Delete programs  
+- View program details and learner profiles  
+- Post announcements for learners  
+
+---
+
+## 🚀 Web Demo  
+Check out the live demo here:  
+👉 [Google Drive Demo](https://drive.google.com/file/d/1AZ67neyprM5EbiMFj-T68e8DQKwwZlPZ/view?usp=sharing)
+
+---
+
+## 🧑‍💻 Team Contributions  
+All team members contributed effectively, with their commits clearly reflected in the [GitHub repository](https://github.com/snasambu/flutter_app).  
+The commit history shows collaborative development across multiple screens, features, and updates.
+
+---
+
+## ⚙️ Tech Stack  
+- **Framework:** Flutter (cross-platform: web + mobile)  
+- **Language:** Dart  
+- **Architecture:** Modular (`screens`, `widgets`, `models`, `theme`)  
+- **Routing:** Named Routes  
+- **UI Design:** Material Design principles  
+
+---
+
+## 🧭 Navigation Flow  
+
+### Learner  
+`Login → Home → Program Listing → Program Details → Learning Content → Feedback`
+
+### Admin  
+`Login → Home → Manage Programs → Program Details / Learner Profiles → Announcements / Edit Programs`
 
 ---
 
@@ -64,33 +74,6 @@ Figma Wireframe
 You can view the complete design wireframe for this project on Figma:
 
 👉 [Excelerate Flutter App Wireframe](https://www.figma.com/make/O1GZQ7tvooGfoqd2qnFWPO/Excelerate-Flutter-App-Wireframe?node-id=0-1&t=ot1Bn5miBADq2N9N-1)
-
-
----
-
-## 🌐 Live Demo (GitHub Pages)
-Live Site URL:  
-👉 [https://snasambu.github.io/flutter_app/](https://snasambu.github.io/flutter_app/)
-
-> ⚠️ *Note: The live site is currently under improvement; you can still view the local web build using*  
-> `flutter run -d chrome` *or host it with:*  
-> `python -m http.server 8000`
-
----
-
-## 🖼️ Screenshots
-
-### 🔐 Login Screen
-![Login Screen](screenshots/login.png)
-
-### 🏠 Home Screen
-![Home Screen](screenshots/home.png)
-
-### 📋 Program Listing Screen
-![Program Listing Screen](screenshots/program_listing.png)
-
-### 📄 Program Details Screen
-![Program Details Screen](screenshots/program_details.png)
 
 ---
 
